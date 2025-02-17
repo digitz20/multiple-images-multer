@@ -79,7 +79,7 @@ exports.updateUser = async (req, res) => {
         const oldPath = user.familyPictures.map((e) => {return `./uploads/${e}`})
 
         if(req.files) {
-            oldPath.forEa && req.files[0]ch((path) => {
+            oldPath.forEach((path) => {
                 if(fs.existsSync(path)) {
                     fs.unlinkSync(path)
 
